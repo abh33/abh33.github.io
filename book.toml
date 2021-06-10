@@ -6,7 +6,7 @@ src = "src"
 title = "Robot Simulations - Exploring the inner- workings of CoppeliaSim"
 
 [build]
-build-dir = "nb_theme"
+build-dir = "coppelia_mooc_dir"
 create-missing = false
 
 [output.html.fold]
@@ -24,7 +24,7 @@ enable = false
 
 [output.html]
 theme = "new_mdbook_theme"
-default-theme = "rust"
+default-theme = "navy"
 no-section-label = true
 google-analytics = "UA-145861739-2"
 #additional-css = ["style.css"]

@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js rust">
+<html lang="en" class="sidebar-visible no-js navy">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Task 0 - Robot Simulations - Exploring the inner- workings of CoppeliaSim</title>
+        <title>Welcome to CoppeliaSim MOOC - Robot Simulations - Exploring the inner- workings of CoppeliaSim</title>
                 
 
         <!-- Custom HTML head -->
@@ -37,7 +37,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -63,7 +63,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('rust')
+            html.classList.remove('navy')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="welcome.html">Welcome to NB theme!</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="task_0.html" class="active">Task 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="software_installation_ubuntu.html">(1a) Software Installation (Ubuntu)</a></li><li class="chapter-item "><a href="software_installation_windows.html">(1b) Software Installation (Windows)</a></li><li class="chapter-item "><a href="test_setup.html">(2) Test Setup</a></li><li class="chapter-item "><a href="tutorials.html">(3) Learning Resources / Tutorials</a></li><li class="chapter-item "><a href="assignment.html">(4) Solving Assignment</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><div>Task 1</div></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item affix "><a href="welcome.html" class="active">Welcome to CoppeliaSim MOOC</a></li><li class="spacer"></li><li class="chapter-item "><a href="Installation.html">Module 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="software_installation_ubuntu.html">Software Installation (Ubuntu)</a></li><li class="chapter-item "><a href="software_installation_windows.html">Software Installation (Windows)</a></li></ol></li><li class="chapter-item "><a href="task_0.html">Module 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="software_installation_ubuntu.html">(1a) Software Installation (Ubuntu)</a></li><li class="chapter-item "><a href="software_installation_windows.html">(1b) Software Installation (Windows)</a></li><li class="chapter-item "><a href="test_setup.html">(2) Test Setup</a></li><li class="chapter-item "><a href="tutorials.html">(3) Learning Resources / Tutorials</a></li><li class="chapter-item "><a href="assignment.html">(4) Solving Assignment</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><div>Task 1</div></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -91,20 +91,29 @@
             <div class="page">
                 <!-- <html>
 	<head>
+	<style>
+		
+	@media only screen and (max-width: 600px) {
+	  .eyrc_ckt{
+			display:none;
+		}
+	}
+
+	</style>
 	</head>
 	<body>
 		<div>
 		<center></center>
 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
 				<div >
-					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px"/>
+					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
 				</div>
 				<div>
-					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px">
+					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
 				</div>
 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
-					Robotics Competition<br>
-					2020-21
+					e-Yantra<br>
+					MOOC
 				</div>
 			</div>
 			
@@ -119,20 +128,29 @@
                     <div style="width:100%">
                         <html>
 	<head>
+	<style>
+		
+	@media only screen and (max-width: 600px) {
+	  .eyrc_ckt{
+			display:none;
+		}
+	}
+
+	</style>
 	</head>
 	<body>
 		<div>
 		<center></center>
 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
 				<div >
-					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px"/>
+					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
 				</div>
 				<div>
-					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px">
+					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
 				</div>
 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
-					Robotics Competition<br>
-					2020-21
+					e-Yantra<br>
+					MOOC
 				</div>
 			</div>
 			
@@ -152,9 +170,9 @@
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
                             <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
                                                 <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
@@ -206,74 +224,15 @@
 </style>
 <!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
 <center>
-    <h1 id="task-0"><a class="header" href="#task-0">Task 0</a></h1>
+    <h1 id="welcome-to-coppeliasim-mooc"><a class="header" href="#welcome-to-coppeliasim-mooc">Welcome to CoppeliaSim MOOC!</a></h1>
 </center>
-<hr />
-</br>
-<p>Welcome to <strong>Task 0</strong> of <strong>Nirikshak Bot</strong>.</p>
-<p>The aim of this task is to get you started with installation of required software and learn the resources related to the software.</p>
-<p>This task is divided into <strong>four</strong> parts:</p>
-<ul>
-<li>
-<p><strong>(1) Software / Libraries Installation</strong></p>
-<ul>
-<li>
-<p><strong>(a)</strong> <strong><a href="./software_installation_ubuntu.html">for Ubuntu OS</a></strong></p>
-</li>
-<li>
-<p><strong>(b)</strong> <strong><a href="./software_installation_windows.html">for Windows OS</a></strong></p>
-</li>
-</ul>
-<p>Follow the instructions provided in these documents to install the software / libraries on the OS you have in your PC / laptop:</p>
-<ul>
-<li>Miniconda for Python 3.8</li>
-<li>OpenCV</li>
-<li>NumPy</li>
-<li>Matplotlib</li>
-<li>Jupyter Notebook, JupyterLab</li>
-<li>CoppeliaSim 4.0.0</li>
-<li>Visual Studio Code</li>
-</ul>
-</li>
-<li>
-<p><strong>(2)</strong> <strong><a href="./test_setup.html">Testing the Setup</a></strong> - This document contains instructions to test the installation of:</p>
-<ul>
-<li>Mincionda virtual Python environment</li>
-<li>OpenCV, NumPy and other libraries</li>
-<li>CoppeliaSim Robotics Simulator Platform</li>
-</ul>
-</li>
-<li>
-<p><strong>(3)</strong> <strong><a href="./tutorials.html">Learning Resources / Tutorials</a></strong> - This document contains tutorials to learn:</p>
-<ul>
-<li>Python language</li>
-<li>Image Processing using OpenCV-Python, NumPy, Matplotlib</li>
-<li>Lua language</li>
-<li>Basics of Linux and Ubuntu (<strong>only</strong> for teams using Ubuntu OS)</li>
-</ul>
-</li>
-<li>
-<p><strong>(4)</strong> <strong><a href="./assignment.html">Solving Assignment</a></strong> - This document describes the assignment to be solved based on Python and Lua tutorials.</p>
-<ul>
-<li>The assignment is a team-contest hosted on coding platform, CodeChef.</li>
-<li>Each participant needs to create an account on CodeChef and create team after that to enter the contest.</li>
-<li>The contest will start from <em><strong>07-10-2020 23:59:00</strong></em> and will end on <em><strong>19-10-2020 23:59:00</strong></em>.</li>
-<li>There will be 10 problems to solve.</li>
-</ul>
-</li>
-</ul>
-<br/>
-<hr />
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="welcome.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
                         
-                                                    <a rel="next" href="software_installation_ubuntu.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="Installation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -283,11 +242,8 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="welcome.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
                 
-                                    <a rel="next" href="software_installation_ubuntu.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="Installation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>

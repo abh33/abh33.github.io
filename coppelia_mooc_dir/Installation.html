@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js rust">
+<html lang="en" class="sidebar-visible no-js navy">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Welcome to NB theme! - Robot Simulations - Exploring the inner- workings of CoppeliaSim</title>
+        <title>Module 0 - Robot Simulations - Exploring the inner- workings of CoppeliaSim</title>
                 
 
         <!-- Custom HTML head -->
@@ -37,7 +37,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -63,7 +63,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('rust')
+            html.classList.remove('navy')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="welcome.html">Welcome to NB theme!</a></li><li class="spacer"></li><li class="chapter-item "><a href="task_0.html">Task 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="software_installation_ubuntu.html">(1a) Software Installation (Ubuntu)</a></li><li class="chapter-item "><a href="software_installation_windows.html">(1b) Software Installation (Windows)</a></li><li class="chapter-item "><a href="test_setup.html">(2) Test Setup</a></li><li class="chapter-item "><a href="tutorials.html">(3) Learning Resources / Tutorials</a></li><li class="chapter-item "><a href="assignment.html">(4) Solving Assignment</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><div>Task 1</div></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item affix "><a href="welcome.html">Welcome to CoppeliaSim MOOC</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="Installation.html" class="active">Module 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="software_installation_ubuntu.html">Software Installation (Ubuntu)</a></li><li class="chapter-item "><a href="software_installation_windows.html">Software Installation (Windows)</a></li></ol></li><li class="chapter-item "><a href="task_0.html">Module 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="software_installation_ubuntu.html">(1a) Software Installation (Ubuntu)</a></li><li class="chapter-item "><a href="software_installation_windows.html">(1b) Software Installation (Windows)</a></li><li class="chapter-item "><a href="test_setup.html">(2) Test Setup</a></li><li class="chapter-item "><a href="tutorials.html">(3) Learning Resources / Tutorials</a></li><li class="chapter-item "><a href="assignment.html">(4) Solving Assignment</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><div>Task 1</div></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -91,20 +91,29 @@
             <div class="page">
                 <!-- <html>
 	<head>
+	<style>
+		
+	@media only screen and (max-width: 600px) {
+	  .eyrc_ckt{
+			display:none;
+		}
+	}
+
+	</style>
 	</head>
 	<body>
 		<div>
 		<center></center>
 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
 				<div >
-					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px"/>
+					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
 				</div>
 				<div>
-					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px">
+					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
 				</div>
 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
-					Robotics Competition<br>
-					2020-21
+					e-Yantra<br>
+					MOOC
 				</div>
 			</div>
 			
@@ -119,20 +128,29 @@
                     <div style="width:100%">
                         <html>
 	<head>
+	<style>
+		
+	@media only screen and (max-width: 600px) {
+	  .eyrc_ckt{
+			display:none;
+		}
+	}
+
+	</style>
 	</head>
 	<body>
 		<div>
 		<center></center>
 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
 				<div >
-					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px"/>
+					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
 				</div>
 				<div>
-					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px">
+					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
 				</div>
 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
-					Robotics Competition<br>
-					2020-21
+					e-Yantra<br>
+					MOOC
 				</div>
 			</div>
 			
@@ -152,9 +170,9 @@
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
                             <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
                                                 <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
@@ -205,28 +223,33 @@
 	}
 </style>
 <!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
-<center>
-    <h1 id="welcome-to-nirikshak-bot-nb-theme"><a class="header" href="#welcome-to-nirikshak-bot-nb-theme">Welcome to Nirikshak Bot (NB) Theme!</a></h1>
-</center>
-<hr />
-</br>
-<center><img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/rr.png"/></center>
-</br>
-<p>Rescue operations pose a grave danger to victim as well as to those  assigned the job of saving the lives of victims. Rescuing people in case of fire and explosion in any cityscape comprising numerous buildings  (these may be including residential, commercial, industrial,  petroleum/chemical distribution, maritime, construction, and  agricultural buildings etc) is a risky and crucial operation.</p>
-<p>Robots can be used in such applications to save lives of people and also provide crucial information that can further be used by experts  for decision making. The purpose of Rapid Rescuer is to rescue victims  from dangerous or unpleasant situations to safer locations.</p>
-<p>Motivated by this idea, in the current edition of <strong>e-Yantra Robotics Competition (eYRC 2020-21)</strong> we have designed a theme, <strong>“Nirikshak Bot”</strong>.</p>
-<p>The arena for the theme is an abstraction of a city in the form of a maze. An image of a maze will be given to teams and using Image  Processing, teams have to find the shortest path from start node to  final node. This information will be communicated to the Bot. The goal  is to traverse the shortest path and evacuate people from different  locations to a safe place whilst avoiding unknown obstacles.</p>
-<p>Challenges in this theme include Image Processing, Algorithm  building, Wireless Communication, Building a Bot, Embedded C  programming.</p>
-<p>The critical factor is time and the challenge is to complete the  given tasks in the shortest time possible whilst incurring the least penalties. The teams that perform the task best in accordance with the  rules will be declared the <strong>WINNER</strong> of the competition.</p>
-<p>All the best !!</p>
-<center><img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/Problem_Idea_Solution_Transp.png" style="scale:125%;" /></center>
+<center> <h1 id="coppeliasim-400-installation"><a class="header" href="#coppeliasim-400-installation">CoppeliaSim 4.0.0 Installation</a></h1> </center>
+<h2 id=""><a class="header" href="#"></a></h2>
+<ul>
+<li>In this section, we will install <strong>CoppeliaSim Robotics Simulator Platform</strong>.</li>
+<li>The robot simulator CoppeliaSim is based on a distributed control architecture: each object/model can be individually controlled via an embedded script, a plugin, a ROS or BlueZero node, a remote API client, or a custom solution. This makes CoppeliaSim very versatile and ideal for multi-robot applications. Controllers can be written in C/C++, Python, Java, Lua, Matlab or Octave.</li>
+<li>CoppeliaSim is used for fast algorithm development, factory automation simulations, fast prototyping and verification, robotics related education, remote monitoring, safety double-checking, as digital twin, and much more. You can find a feature overview <a href="https://www.coppeliarobotics.com/features">here</a>.</li>
+<li>It can be used as a stand-alone application or can easily be embedded into a main client application: its small footprint and elaborate API makes CoppeliaSim an ideal candidate to embed into higher-level applications.</li>
+</ul>
+<p>Please follow the instructions provided in these documents to install the software / libraries on the OS you have in your PC / laptop:</p>
+<ul>
+<li><strong>Software / Libraries Installation</strong>
+<ul>
+<li><strong><a href="./software_installation_ubuntu.html">for Ubuntu OS</a></strong></li>
+<li><strong><a href="./software_installation_windows.html">for Windows OS</a></strong></li>
+</ul>
+</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="welcome.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
-                                                    <a rel="next" href="task_0.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="software_installation_ubuntu.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -236,8 +259,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="welcome.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
-                                    <a rel="next" href="task_0.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="software_installation_ubuntu.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>

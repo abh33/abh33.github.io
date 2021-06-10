@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js rust">
+<html lang="en" class="sidebar-visible no-js navy">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -37,7 +37,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -63,7 +63,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('rust')
+            html.classList.remove('navy')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="welcome.html">Welcome to NB theme!</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="task_0.html">Task 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="software_installation_ubuntu.html">(1a) Software Installation (Ubuntu)</a></li><li class="chapter-item expanded "><a href="software_installation_windows.html" class="active">(1b) Software Installation (Windows)</a></li><li class="chapter-item "><a href="test_setup.html">(2) Test Setup</a></li><li class="chapter-item "><a href="tutorials.html">(3) Learning Resources / Tutorials</a></li><li class="chapter-item "><a href="assignment.html">(4) Solving Assignment</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><div>Task 1</div></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item affix "><a href="welcome.html">Welcome to CoppeliaSim MOOC</a></li><li class="spacer"></li><li class="chapter-item "><a href="Installation.html">Module 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="software_installation_ubuntu.html">Software Installation (Ubuntu)</a></li><li class="chapter-item "><a href="software_installation_windows.html" class="active">Software Installation (Windows)</a></li></ol></li><li class="chapter-item expanded "><a href="task_0.html">Module 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="software_installation_ubuntu.html">(1a) Software Installation (Ubuntu)</a></li><li class="chapter-item expanded "><a href="software_installation_windows.html" class="active">(1b) Software Installation (Windows)</a></li><li class="chapter-item "><a href="test_setup.html">(2) Test Setup</a></li><li class="chapter-item "><a href="tutorials.html">(3) Learning Resources / Tutorials</a></li><li class="chapter-item "><a href="assignment.html">(4) Solving Assignment</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><div>Task 1</div></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -91,20 +91,29 @@
             <div class="page">
                 <!-- <html>
 	<head>
+	<style>
+		
+	@media only screen and (max-width: 600px) {
+	  .eyrc_ckt{
+			display:none;
+		}
+	}
+
+	</style>
 	</head>
 	<body>
 		<div>
 		<center></center>
 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
 				<div >
-					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px"/>
+					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
 				</div>
 				<div>
-					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px">
+					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
 				</div>
 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
-					Robotics Competition<br>
-					2020-21
+					e-Yantra<br>
+					MOOC
 				</div>
 			</div>
 			
@@ -119,20 +128,29 @@
                     <div style="width:100%">
                         <html>
 	<head>
+	<style>
+		
+	@media only screen and (max-width: 600px) {
+	  .eyrc_ckt{
+			display:none;
+		}
+	}
+
+	</style>
 	</head>
 	<body>
 		<div>
 		<center></center>
 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
 				<div >
-					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px"/>
+					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
 				</div>
 				<div>
-					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px">
+					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
 				</div>
 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
-					Robotics Competition<br>
-					2020-21
+					e-Yantra<br>
+					MOOC
 				</div>
 			</div>
 			
@@ -152,9 +170,9 @@
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
                             <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
                                                 <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
@@ -585,7 +603,7 @@ exit()
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="test_setup.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="task_0.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -599,7 +617,7 @@ exit()
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="test_setup.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="task_0.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>
