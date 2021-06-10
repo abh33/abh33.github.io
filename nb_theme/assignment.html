@@ -1,0 +1,389 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>(4) Solving Assignment - Robot Simulations - Exploring the inner- workings of CoppeliaSim</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!--         <link rel="icon" href="favicon.svg">
+         -->
+                <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="welcome.html">Welcome to NB theme!</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="task_0.html">Task 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="software_installation_ubuntu.html">(1a) Software Installation (Ubuntu)</a></li><li class="chapter-item "><a href="software_installation_windows.html">(1b) Software Installation (Windows)</a></li><li class="chapter-item "><a href="test_setup.html">(2) Test Setup</a></li><li class="chapter-item "><a href="tutorials.html">(3) Learning Resources / Tutorials</a></li><li class="chapter-item expanded "><a href="assignment.html" class="active">(4) Solving Assignment</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><div>Task 1</div></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <!-- <html>
+	<head>
+	</head>
+	<body>
+		<div>
+		<center></center>
+			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+				<div >
+					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px"/>
+				</div>
+				<div>
+					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px">
+				</div>
+				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+					Robotics Competition<br>
+					2020-21
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
+
+
+ -->
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div style="width:100%">
+                        <html>
+	<head>
+	</head>
+	<body>
+		<div>
+		<center></center>
+			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+				<div >
+					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px"/>
+				</div>
+				<div>
+					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px">
+				</div>
+				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+					Robotics Competition<br>
+					2020-21
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
+
+
+
+                    </div>
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Robot Simulations - Exploring the inner- workings of CoppeliaSim</h1>
+
+                    <div class="right-buttons">
+                                                                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- <center><img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" style="scale:75%;" /></center> -->
+<style>
+.back{
+	position: fixed;
+	width: 250px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+    margin-top: auto; 
+    margin-left: auto; 
+	opacity: 0.15;
+    z-index: -1;
+	}
+</style>
+<!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
+<center>
+    <h1 id="task-0"><a class="header" href="#task-0">Task 0</a></h1>
+    <h1 id="solving-assignment"><a class="header" href="#solving-assignment">Solving Assignment</a></h1>
+</center>
+<hr />
+</br>
+<blockquote>
+<p><strong>Note:</strong> We hope that you have gone through the <a href="./tutorials.html">Tutorials</a> document and understood the syntax of <strong>Python</strong> and <strong>Lua</strong> language. If not, then please do that before trying to solve the assignment over here.</p>
+</blockquote>
+<p>In this document you will apply the basic usage of Python and Lua language learnt from the Tutorials and solve the assignment.</p>
+<p>This assignment is a little different, in a way that it's actually a <strong>team-contest</strong> hosted on <b><a href="https://www.codechef.com" target="_blank">CodeChef</a></b>.</p>
+<ul>
+<li><a href="#team-contest-description">Team-Contest Description</a></li>
+<li><a href="#how-do-i-access-the-team-contest">How do I access the Team-Contest?</a></li>
+<li><a href="#general-instructions">General Instructions</a></li>
+</ul>
+<br/>
+<p>What's <em><strong>CodeChef</strong></em> you ask?</p>
+<p>Well, CodeChef is a global <a href="https://en.wikipedia.org/wiki/Competitive_programming" target="_blank">competitive programming</a> platform. It is an educational initiative started by <strong>Directi</strong> which hosts many coding contests and has a large community of programmers that helps students and professionals test and improve their coding skills.</p>
+<br/>
+<hr />
+<h2 id="team-contest-description"><a class="header" href="#team-contest-description">Team-Contest Description</a></h2>
+<p>We will be using this platform to test your <strong>Python</strong> and <strong>Lua</strong> programming skills. Let’s see what this assignment or team-contest has in store for you.</p>
+<ul>
+<li>
+<p>The contest will start from <em><strong>07-10-2020 23:59:00</strong></em> and will end on <em><strong>19-10-2020 23:59:00</strong></em>.</p>
+</li>
+<li>
+<p>The contest will have <strong>10 problems</strong>:</p>
+<ul>
+<li><strong>5 problems</strong> based on <em>Python</em> programming</li>
+<li><strong>5 problems</strong> based on <em>Lua</em> programming</li>
+</ul>
+</li>
+<li>
+<p><strong>Each problem</strong> has the maximum score of <strong>100 points</strong>.</p>
+</li>
+<li>
+<p><strong>Each problem</strong> is divided into multiple <strong>subtasks</strong> and the <em>100 points</em> are distributed over these subtasks. The points awarded for each subtask will be mentioned in the description of that problem.</p>
+</li>
+<li>
+<p><strong>Each subtask</strong> will have few <strong>test cases</strong> associated with it.</p>
+</li>
+<li>
+<p>To obtain all the points associated with a <strong>subtask</strong>, your program will have to clear or pass all the test cases. Failing even <strong>one test case</strong>, will result in <strong>0 points</strong> for that particular subtask.</p>
+</li>
+<li>
+<p>Your performance in this assignment will contribute to the overall score of <strong>Task 0</strong>.</p>
+</li>
+</ul>
+<br/>
+<p>Now that you are aware of the overall assignment or contest structure, let’s zoom in on the structure each problem will follow.</p>
+<ol>
+<li><strong>Problem</strong>: A brief description of the problem statement.</li>
+<li><strong>Input</strong>: It describes the format in which the input to a program will be provided.</li>
+<li><strong>Output</strong>: It describes the format an output of a program <em>must</em> follow.</li>
+<li><strong>Constraints</strong>: As the name suggests, it will tell you the limits/range of values a variable will have.</li>
+<li><strong>Subtask</strong>: This section will mention all the subtask and the points associated with each subtask.</li>
+<li><strong>Sample Input</strong>: It shows an example input to a program, based on its format mentioned in <em>Input</em> section above.</li>
+<li><strong>Sample Output</strong>: It shows an example output of a program for the corresponding <em>Sample Input</em> based on its format mentioned in <em>Output</em> section above.</li>
+<li><strong>Explanation</strong>: This section explains the problem using the <em>Sample Input</em> and <em>Sample Output</em> as a reference.</li>
+</ol>
+<br/>
+<p>Given all the above details, one might wonder how to feed the input values of test cases to the code? You need not worry about that. Just assume there is a user at the other end who is inserting the input to your program. You just have to read and parse the values.</p>
+<br/>
+<p><em><strong>A word of caution:</strong></em></p>
+<p><em>While displaying the results, make sure you display it in the exact format as is specified in the problem. An extra space in the output can cause the code to fail the test case.</em></p>
+<br/>
+<p>Here’s a list of possible remarks for the output you might get. You can also find this list on the right bottom corner of the problem page.</p>
+<center><img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/task_0/assignment/codechef_output_remarks.png"/></center>
+<br/>
+<hr />
+<h2 id="how-do-i-access-the-team-contest"><a class="header" href="#how-do-i-access-the-team-contest">How do I access the Team-Contest?</a></h2>
+<ul>
+<li>
+<p>Head over to <b><a href="https://www.codechef.com" target="_blank">CodeChef</a></b> and create an account using the same <strong>email address</strong> that you used to register on the eYRC portal. If you have already have CodeChef account, simply login to your account. <em>Please make sure you use the same email address that you used while registering for eYRC</em>.</p>
+</li>
+<li>
+<p>Once you have logged in your CodeChef account, click on this link: <b><a href="http://codechef.com/PYLT20TS/" target="_blank">Team-Contest Page</a></b>.</p>
+</li>
+<li>
+<p>To participate, you will have to create a team with the team name as <strong><code>NB_&lt;Team-ID&gt;</code></strong>. So, if your <strong>Team ID</strong> is <em><strong>9999</strong></em>, you will create the team named as <em><strong>NB_9999</strong></em>.</p>
+</li>
+<li>
+<p>In order to avoid duplicate teams, it is recommended that only team leader creates the team and sends invite to other members of the team.</p>
+</li>
+<li>
+<p>A student can be part of <strong>only one</strong> team with which he/she registered for eYRC. </p>
+</li>
+<li>
+<ul>
+<li><strong>DO NOT</strong> change team compositions at this stage. </li>
+<li><strong>NO</strong> participant should be part of more than one team.</li>
+<li>Students <strong>not abiding</strong> by this rule will result in all the team members getting <strong>disqualified</strong> from the competition.</li>
+</ul>
+</li>
+<li>
+<p>Once you have formed the team, you can enter the contest here: <b><a href="http://codechef.com/PYLT20TS/" target="_blank">Team-Contest Page</a></b>.</p>
+</li>
+<li>
+<p>You will find the list of <strong>10 problems</strong>. Clicking on one of these problems will lead you to the problem page where you will find all the details of that particular problem.</p>
+</li>
+<li>
+<p>All that's left now, is to start solving the problem and submit your solution.</p>
+</li>
+</ul>
+<br/>
+<p><em><strong>Just a suggestion</strong></em></p>
+<p><em>Try to explore CodeChef and get yourself acquainted with the platform before the contest starts. Codechef supports many languages. You could try attempting the practice problems ( in Python or Lua ) hosted on CodeChef.</em></p>
+<br/>
+<hr />
+<h2 id="general-instructions"><a class="header" href="#general-instructions">General Instructions</a></h2>
+<ul>
+<li>Stuck somewhere? Can’t figure out the solution? Approach us on Piazza.</li>
+<li>If your friend is stuck somewhere and can’t figure out the solution then ask him/her also to contact us on Piazza but do not share the code. Everyone is here to learn.</li>
+<li>In case you have questions, specifically regarding any task, please post a query on Piazza. You will get an answer from us within 24 hrs.</li>
+<li>While performing this task, please refrain from using any other forum or medium like email or social media to ask your queries.</li>
+<li>Just sweep through Piazza once before asking a question. Many times, the same or similar kind of question is already answered.</li>
+</ul>
+<br/>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="tutorials.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="tutorials.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                            </nav>
+
+        </div>
+
+        
+                <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-145861739-2', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
