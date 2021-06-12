@@ -1,3 +1,23 @@
+<!-- <center><img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" style="scale:75%;" /></center> -->
+
+<style>
+.back{
+	position: fixed;
+	width: 250px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+    margin-top: auto; 
+    margin-left: auto; 
+	opacity: 0.15;
+    z-index: -1;
+	}
+</style>
+
+
+
+<!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
+
 #             Getting familiar with CoppeliaSim
 
 - This session introduces the basics of CoppeliaSim software and its main features
@@ -23,7 +43,7 @@
 
 
 
-![]()
+![](https://raw.githubusercontent.com/abh33/CoppeliaSim_MOOC_Assets/master/Module_1/LeD%201.1-Getting%20Familiar%20with%20CoppeliaSim/Tutorial/LeD%201.2_Figure_6.gif)
 
 ​                                                                   *Figure 1: Camera Navigation*
 
@@ -100,7 +120,7 @@ For additional reading , go through the CoppeliaSim [manual](https://www.coppeli
 | ![](https://raw.githubusercontent.com/abh33/CoppeliaSim_MOOC_Assets/master/Module_1/LeD%201.1-Getting%20Familiar%20with%20CoppeliaSim/Tutorial/LeD%201.2_Figure_19.png) | If this tool is selected we can select the objects by clicking on them |
 | ![](https://raw.githubusercontent.com/abh33/CoppeliaSim_MOOC_Assets/master/Module_1/LeD%201.1-Getting%20Familiar%20with%20CoppeliaSim/Tutorial/LeD%201.2_Figure_20.png) | For position manipulations like shifting, positioning etc.   |
 | ![](https://raw.githubusercontent.com/abh33/CoppeliaSim_MOOC_Assets/master/Module_1/LeD%201.1-Getting%20Familiar%20with%20CoppeliaSim/Tutorial/LeD%201.2_Figure_21.png) | For rotation manipulations like rotation, orientation etc    |
-|                                                              | It erases the last action performed                          |
+| ![](https://raw.githubusercontent.com/abh33/CoppeliaSim_MOOC_Assets/master/Module_1/LeD%201.1-Getting%20Familiar%20with%20CoppeliaSim/Tutorial/LeD%201.2_Figure_22.png) | It erases the last action performed                          |
 | ![](https://raw.githubusercontent.com/abh33/CoppeliaSim_MOOC_Assets/master/Module_1/LeD%201.1-Getting%20Familiar%20with%20CoppeliaSim/Tutorial/LeD%201.2_Figure_23.png) | It restores the action previously erased by undo             |
 
 ​                                *Table 3: Other important tools*

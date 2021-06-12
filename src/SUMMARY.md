@@ -12,7 +12,19 @@
   - [(1b) Software Installation (Windows)](software_installation_windows.md)
   - [(2) Test Setup](test_setup.md)
   - [(3) Learning Resources / Tutorials](tutorials.md)
-  - [(4) Solving Assignment](assignment.md)
+  - [LeD 1.1]() Getting Familiar with CoppeliaSim
+    - [Tutorial](LeD_1.2_Getting_Familiar.md)
+    - [Transcript](LeD_1.2_Getting_Familiar_transcript.md)
+  - LeD 1.2 Adding Primitive Objects
+    - [Tutorial][LeD_1.3_Adding_primitive_objects.md]
+    - [Transcript](LeD_1.3_Adding_primitive_objects_Transcript.md)
+  - LeD 1.3 Object Properties and Scene Heirarchy
+    - a)Object Properties
+      - [Tutorial](LeD_1.4(a)_Object_properties.md)
+      - [Transcript](LeD_1.4(a)_Object_properties_Transcript.md)
+    - b) Scene Heirarchy
+      - [Tutorial](LeD_1.4(b)_Scene_Hierarchy_Transcript.md)
+  - 
 
 ---
 

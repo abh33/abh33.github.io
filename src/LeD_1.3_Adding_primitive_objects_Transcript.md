@@ -52,14 +52,11 @@
   *Which among the following shapes is not available in the CoppeliaSim?*
 
   - [ ] *Cuboid*
-
+  - [ ] *Cone*
+  - [ ] *Disc*
   - [ ] *Cylinder*
 
-  - [ ] *Cone*
-
-  - [ ] *Disc*
-
-    
+  
 
 - Now, select **cuboid** from the list. A **dialog box** will pop up on the screen .
 
