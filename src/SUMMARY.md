@@ -24,11 +24,9 @@
       - [Transcript](LeD_1.4(a)_Object_properties_Transcript.md)
     - b) Scene Heirarchy
       - [Tutorial](LeD_1.4(b)_Scene_Hierarchy_Transcript.md)
-  - 
+    
+    
 
----
-
-- [LeD 1.1-Tutorial](LeD_1.2_Getting_Familiar.md)
 - [LeD 1.1-Transcript](LeD_1.2_Getting_Familiar_transcript.md)
 - [LeD 1.2-Tutorial](LeD_1.3_Adding_primitive_objects.md)
 - [LeD 1.2-Transcript](LeD_1.3_Adding_primitive_objects_Transcript.md)
