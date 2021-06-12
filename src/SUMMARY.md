@@ -34,6 +34,11 @@
   - [LeD 1.5- Joints and Force Sensor](Led_1.3_welcome.md)
     - [Tutorial](LeD_1.6_Joints_and_Force_Sensor.md)
     - [Transcript](LeD_1.6_Joints_and_Force_sensor_transcript.md)
+  - [LbD 1.1 Quiz](LbD_1.1-Quiz.md)
+  - [LbD 1.2 Assignment](LbD_1.2_Assignment.md)
+  - [LxT 1.1-Additional Resources](Lxt_1.1-Additional_Resources.md)
+  - [LxT 1.2-Assimilation quiz](Lxt_1.2-Assimilation_Quiz.md)
+  - [LxI 1.1-Focus question](LxI_1.1-Focus_Question.md)
 
 ------
 
