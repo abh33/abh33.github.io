@@ -12,21 +12,34 @@
   - [(1b) Software Installation (Windows)](software_installation_windows.md)
   - [(2) Test Setup](test_setup.md)
   - [(3) Learning Resources / Tutorials](tutorials.md)
-  - [LeD 1.1]() Getting Familiar with CoppeliaSim
+  - [LeD_1.1-Getting Familiar with Coppeliasim](LeD_1.1_welcome.md)
     - [Tutorial](LeD_1.2_Getting_Familiar.md)
     - [Transcript](LeD_1.2_Getting_Familiar_transcript.md)
-  - LeD 1.2 Adding Primitive Objects
-    - [Tutorial][LeD_1.3_Adding_primitive_objects.md]
+  - [LeD_1.2-Adding Primitive Objects](LeD_1.1_welcome.md)
+    - [Tutorial](LeD_1.3_Adding_primitive_objects.md)
     - [Transcript](LeD_1.3_Adding_primitive_objects_Transcript.md)
-  - LeD 1.3 Object Properties and Scene Heirarchy
-    - a)Object Properties
+  - [LeD_1.3- Object Properties and Hierarchy](LeD_1.1_welcome.md)
+    - [a)Object_Properties](LeD_1.3_welcome.md)
       - [Tutorial](LeD_1.4(a)_Object_properties.md)
       - [Transcript](LeD_1.4(a)_Object_properties_Transcript.md)
-    - b) Scene Heirarchy
+    - [b)Scene_Hierarchy](LeD_1.1_welcome.md)
       - [Tutorial](LeD_1.4(b)_Scene_Hierarchy_Transcript.md)
-    
-    
+  - [LeD 1.4- Translation and Rotation](Led_1.3_welcome.md)
+    - [a)Translation](Led_1.3_welcome.md)
+      - [Tutorial](LeD_1.5(a)_Translation.md)
+      - [Transcript](LeD_1.5(a)_translation_transcript.md)
+    - [b)Rotation](Led_1.3_welcome.md)
+      - [Tutorial](LeD_1.5(b)_Rotation.md)
+      - [Transcript](LeD_1.5(b)_Rotation_transcript.md)
+  - [LeD 1.5- Joints and Force Sensor](Led_1.3_welcome.md)
+    - [Tutorial](LeD_1.6_Joints_and_Force_Sensor.md)
+    - [Transcript](LeD_1.6_Joints_and_Force_sensor_transcript.md)
 
+------
+
+
+
+- [LeD 1.1-Tutorial](LeD_1.2_Getting_Familiar_transcript.md)
 - [LeD 1.1-Transcript](LeD_1.2_Getting_Familiar_transcript.md)
 - [LeD 1.2-Tutorial](LeD_1.3_Adding_primitive_objects.md)
 - [LeD 1.2-Transcript](LeD_1.3_Adding_primitive_objects_Transcript.md)
