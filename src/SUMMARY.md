@@ -16,6 +16,20 @@
 
 ---
 
-- [Task 1]()
-
-
+- [LeD 1.1-Tutorial](LeD_1.2_Getting_Familiar.md)
+- [LeD 1.1-Transcript](LeD_1.2_Getting_Familiar_transcript.md)
+- [LeD 1.2-Tutorial](LeD_1.3_Adding_primitive_objects.md)
+- [LeD 1.2-Transcript](LeD_1.3_Adding_primitive_objects_Transcript.md)
+- [LeD 1.3(a)-Tutorial](LeD_1.4(a)_Object_properties.md)
+- [LeD 1.3(a)-Transcript](LeD_1.4(b)_Scene_Hierarchy_Transcript.md)
+- [LeD 1.4(a)-Tutorial](LeD_1.5(a)_Translation.md)
+- [LeD 1.4(a)-Transcript](LeD_1.5(a)_translation_transcript.md)
+- [LeD 1.4(b)-Tutorial](LeD_1.5(b)_Rotation.md)
+- [LeD 1.4(b)-Transcript](LeD_1.5(b)_Rotation_transcript.md)
+- [LeD 1.5-Tutorial](LeD_1.6_Joints_and_Force_Sensor.md)
+- [LeD 1.5-Trancript](LeD_1.6_Joints_and_Force_sensor_transcript.md)
+- [LbD 1.1 Quiz](LbD_1.1-Quiz.md)
+- [LbD 1.2 Assignment](LbD_1.2_Assignment.md)
+- [LxT 1.1-Additional Resources](Lxt_1.1-Additional_Resources.md)
+- [LxT 1.2-Assimilation quiz](Lxt_1.2-Assimilation_Quiz.md)
+- [LxI 1.1-Focus question](LxI_1.1-Focus_Question.md)

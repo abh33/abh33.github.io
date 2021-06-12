@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>LbD 1.2 Assignment - Robot Simulations - Exploring the inner- workings of CoppeliaSim</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!--         <link rel="icon" href="favicon.svg">
+         -->
+                <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="welcome.html">Welcome to CoppeliaSim MOOC</a></li><li class="spacer"></li><li class="chapter-item "><a href="Installation.html">Module 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="software_installation_ubuntu.html">Software Installation (Ubuntu)</a></li><li class="chapter-item "><a href="software_installation_windows.html">Software Installation (Windows)</a></li></ol></li><li class="chapter-item "><a href="task_0.html">Module 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="software_installation_ubuntu.html">(1a) Software Installation (Ubuntu)</a></li><li class="chapter-item "><a href="software_installation_windows.html">(1b) Software Installation (Windows)</a></li><li class="chapter-item "><a href="test_setup.html">(2) Test Setup</a></li><li class="chapter-item "><a href="tutorials.html">(3) Learning Resources / Tutorials</a></li><li class="chapter-item "><a href="assignment.html">(4) Solving Assignment</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><a href="LeD_1.2_Getting_Familiar.html">LeD 1.1-Tutorial</a></li><li class="chapter-item "><a href="LeD_1.2_Getting_Familiar_transcript.html">LeD 1.1-Transcript</a></li><li class="chapter-item "><a href="LeD_1.3_Adding_primitive_objects.html">LeD 1.2-Tutorial</a></li><li class="chapter-item "><a href="LeD_1.3_Adding_primitive_objects_Transcript.html">LeD 1.2-Transcript</a></li><li class="chapter-item "><a href="LeD_1.4(a)_Object_properties.html">LeD 1.3(a)-Tutorial</a></li><li class="chapter-item "><a href="LeD_1.4(b)_Scene_Hierarchy_Transcript.html">LeD 1.3(a)-Transcript</a></li><li class="chapter-item "><a href="LeD_1.5(a)_Translation.html">LeD 1.4(a)-Tutorial</a></li><li class="chapter-item "><a href="LeD_1.5(a)_translation_transcript.html">LeD 1.4(a)-Transcript</a></li><li class="chapter-item "><a href="LeD_1.5(b)_Rotation.html">LeD 1.4(b)-Tutorial</a></li><li class="chapter-item "><a href="LeD_1.5(b)_Rotation_transcript.html">LeD 1.4(b)-Transcript</a></li><li class="chapter-item "><a href="LeD_1.6_Joints_and_Force_Sensor.html">LeD 1.5-Tutorial</a></li><li class="chapter-item "><a href="LeD_1.6_Joints_and_Force_sensor_transcript.html">LeD 1.5-Trancript</a></li><li class="chapter-item "><a href="LbD_1.1-Quiz.html">LbD 1.1 Quiz</a></li><li class="chapter-item expanded "><a href="LbD_1.2_Assignment.html" class="active">LbD 1.2 Assignment</a></li><li class="chapter-item "><a href="Lxt_1.1-Additional_Resources.html">LxT 1.1-Additional Resources</a></li><li class="chapter-item "><a href="Lxt_1.2-Assimilation_Quiz.html">LxT 1.2-Assimilation quiz</a></li><li class="chapter-item "><a href="LxI_1.1-Focus_Question.html">LxI 1.1-Focus question</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <!-- <html>
+	<head>
+	<style>
+		
+	@media only screen and (max-width: 600px) {
+	  .eyrc_ckt{
+			display:none;
+		}
+	}
+
+	</style>
+	</head>
+	<body>
+		<div>
+		<center></center>
+			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+				<div >
+					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+				</div>
+				<div>
+					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+				</div>
+				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+					e-Yantra<br>
+					MOOC
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
+
+
+ -->
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div style="width:100%">
+                        <html>
+	<head>
+	<style>
+		
+	@media only screen and (max-width: 600px) {
+	  .eyrc_ckt{
+			display:none;
+		}
+	}
+
+	</style>
+	</head>
+	<body>
+		<div>
+		<center></center>
+			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+				<div >
+					<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+				</div>
+				<div>
+					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+				</div>
+				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+					e-Yantra<br>
+					MOOC
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
+
+
+
+                    </div>
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Robot Simulations - Exploring the inner- workings of CoppeliaSim</h1>
+
+                    <div class="right-buttons">
+                                                                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="lbd-12---assignment_1"><a class="header" href="#lbd-12---assignment_1">LbD 1.2 - Assignment_1</a></h2>
+<ul>
+<li>In this Assignment ,We will make a Simple <strong>Windmill</strong> with different primitive shapes and sensors. </li>
+<li>You will learn how to add primitive shapes and how to change their dimensions, orientation etc.</li>
+<li>You will learn different properties such as body is dynamic, respondable masking , target velocity etc</li>
+<li>You will also learn concept of grouping two or more bodies together.</li>
+</ul>
+<h2 id="instructions"><a class="header" href="#instructions">Instructions</a></h2>
+<p><img src="https://raw.githubusercontent.com/abh33/CoppeliaSim_MOOC_Assets/master/Module_1/LbD%201.2-Windmill/LbD_1.2_Figure_1.JPG" alt="" /></p>
+<p>​                                                                             <em>Figure 1: Windmill_respondable</em></p>
+<table><thead><tr><th align="center">Name</th><th align="center">x (m)</th><th align="center">y (m)</th><th align="center">z (m)</th><th align="center">dynamic/static</th></tr></thead><tbody>
+<tr><td align="center">base</td><td align="center">8.0000e-01</td><td align="center">8.0000e-01</td><td align="center">1.0000e-01</td><td align="center">static</td></tr>
+<tr><td align="center">tower</td><td align="center">1.3333e-01</td><td align="center">1.3333e-01</td><td align="center">2.0000e+00</td><td align="center">dynamic</td></tr>
+<tr><td align="center">nacelle</td><td align="center">1.0000e-01</td><td align="center">3.0000e-01</td><td align="center">1.0000e-01</td><td align="center">dynamic</td></tr>
+<tr><td align="center">blades (single)</td><td align="center">1.0000e+00</td><td align="center">7.0000e-02</td><td align="center">1.0000e-02</td><td align="center">dynamic</td></tr>
+</tbody></table>
+<p>​                                                                            <em>Table 1: Dimension / properties table</em></p>
+<blockquote>
+<p><strong>Note:</strong> <strong>x and y</strong> position coordinates of <code>base</code> , <code>tower</code> ,<code>nacelle</code> should be <strong>(0 ,0)</strong> . You can check in <strong>object/item shift</strong> from toolbar menu</p>
+</blockquote>
+<ol>
+<li><strong>Strictly</strong> follow the <strong>naming conventions</strong> and dimensions that we provide for the <strong>Windmill_respondable</strong>. refer Figure 1 and Table 1. </li>
+<li>Parts marked with <strong>red</strong> color are either <strong>joints or hidden sensors</strong> i.e. <code>force_sensor_bt ,force_sensor_tn</code> here <code>force_sensor_bt</code> indicates <strong>force sensor</strong> between <code>base and tower</code> and so on.</li>
+<li><code>generator</code> is a <strong>revolute joint</strong> in <strong>motor enabled</strong> mode.</li>
+<li>Create a <strong>scene hierarchy</strong> for the given structure by using different **primitive shapes , sensors and joints **as shown in Figure 1.Make sure you make <code>base</code> as a <strong>universal parent</strong> i.e. all other parts comes under base in scene hierarchy.</li>
+<li>All <strong>primitive shapes</strong> should be set as <strong>Dynamic</strong> except <code>base</code> i.e. <code>base</code> should be <strong>static</strong>.</li>
+<li>All <strong>primitive shapes</strong> that you add should be checked as <strong>respondable</strong>.</li>
+<li>If windmill structure is <strong>not stable</strong> or vibrations are there after running simulation then check there should be <strong>no overlapping</strong> between two <strong>respondable bodies.</strong></li>
+<li>One part made by <strong>grouping</strong> more than one shape/body <strong>i.e.</strong> <code>blades</code> </li>
+</ol>
+<h2 id="a-getting-started"><a class="header" href="#a-getting-started">A. Getting started</a></h2>
+<ul>
+<li>
+<p>Copy-Paste the following <strong>three</strong> files (<strong><code>sim.py</code></strong>, <strong><code>simConst.py</code></strong> and <strong><code>remoteApi.so</code></strong> / <strong><code>remoteApi.dll</code></strong>) in the directory where you downloaded <strong><code>evaluation_script.py</code></strong> . The directory paths where these three files reside are given.</p>
+<ul>
+<li><strong><code>sim.py</code></strong> and <strong><code>simConst.py</code></strong>
+<ul>
+<li>Ubuntu OS - <strong><code>CoppeliaSim_Edu_V4_0_0_Ubuntu18_04/programming/remoteApiBindings/python/python</code></strong></li>
+<li>Windows OS - <strong><code>C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu\programming\remoteApiBindings\python\python</code></strong></li>
+</ul>
+</li>
+<li><strong><code>remoteApi.so</code></strong> (for <strong>Ubuntu OS</strong>) <em>OR</em> <strong><code>remoteApi.dll</code></strong> (for <strong>Windows OS</strong>)
+<ul>
+<li>Ubuntu OS: <strong><code>CoppeliaSim_Edu_V4_0_0_Ubuntu18_04/programming/remoteApiBindings/lib/lib/Ubuntu18_04</code></strong></li>
+<li>Windows OS: <strong><code>C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu\programming\remoteApiBindings\lib\lib\Windows</code></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Also copy paste the scene file you created i.e. <strong>windmill_respondable.ttt</strong>.</p>
+</li>
+<li>
+<p>With this, the directory will have these <strong>five</strong> files at one location:</p>
+<ul>
+<li><strong><code>evaluation_script.py</code></strong></li>
+<li><strong><code>sim.py</code></strong></li>
+<li><strong><code>simConst.py</code></strong></li>
+<li><strong><code>remoteApi.so</code></strong> OR <strong><code>remoteApi.dll</code></strong></li>
+<li><strong><code>windmill_respondable.ttt</code></strong>
+Re-check the directory and make sure these files are present.</li>
+</ul>
+<p><strong>Note:</strong> While working with CoppeliaSim Remote API Server, it is mandatory to have these <strong>three</strong> files in the same directory.</p>
+<ul>
+<li><strong><code>sim.py</code></strong></li>
+<li><strong><code>simConst.py</code></strong></li>
+<li><strong><code>remoteApi.so</code></strong> OR <strong><code>remoteApi.dll</code></strong></li>
+</ul>
+</li>
+<li>
+<p>Open the CoppeliaSim software:</p>
+<ul>
+<li>
+<p>Ubuntu OS</p>
+<ul>
+<li>
+<p>Open <strong>Terminal</strong> (shortcut - <code>Ctrl+Alt+T</code>) and navigate to the directory where the CoppeliaSim software was extracted, for example, <strong><code>~/Downloads/CoppeliaSim_Edu_V4_0_0_Ubuntu18_04</code></strong>.</p>
+</li>
+<li>
+<p>Run the below command in Terminal to launch CoppeliaSim.</p>
+<pre><code class="language-bash">./coppeliaSim.sh
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Windows OS - Double-click the shortcut icon on Desktop to launch CoppeliaSim.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Make sure the CoppeliaSim software is open with the <strong>windmill_respondable model</strong> loaded into the scene.</p>
+</li>
+<li>
+<p>Now, you are all set to proceed further!</p>
+</li>
+</ul>
+<hr />
+<h2 id="b-running-evaluation"><a class="header" href="#b-running-evaluation">B. Running Evaluation</a></h2>
+<ul>
+<li>
+<p>Open new <strong>Terminal</strong> (on Ubuntu OS) or <strong>Anaconda Prompt</strong> (on Windows OS) and navigate to the directory where the above <strong>five</strong> files are present.</p>
+</li>
+<li>
+<p>Run the <strong><code>evaluation_script.py</code></strong> file with command: <strong><code>python evaluation_script.py</code></strong> to run evaluation.</p>
+<ul>
+<li>
+<p>Then, the evaluation file will initiate and try to connect the <em>CoppeliaSim Remote API Server</em>. This requires the CoppeliaSim software running with the <strong>windmill_respondable</strong> model loaded into the scene.</p>
+</li>
+<li>
+<p>Once connected, you will get the message: <strong>Connected successfully to Remote API Server in CoppeliaSim!</strong></p>
+</li>
+<li>
+<p>If your <strong>scene hierarchy, position, naming convention, dimensions</strong> are fine, you will get the message: **Evaluation completed successfully ! **</p>
+</li>
+<li>
+<p>With this message, a text file <strong><code>output.txt</code></strong> will be generated in the same directory. This file contains data in an encoded format. It is suggested to <strong>not play or modify</strong> this file, else your <strong>assignment_1</strong> will fail during the automatic evaluation. Also, <strong>do not rename</strong> the file.</p>
+</li>
+<li>
+<p>You will see output similar to one shown in Figure 2.<img src="https://raw.githubusercontent.com/abh33/CoppeliaSim_MOOC_Assets/master/Module_1/LbD%201.2-Windmill/LbD_1.2_Figure_2.png" alt="" /></p>
+<p>​                                                  <em>Figure 2: Evaluation Successful Message</em></p>
+</li>
+<li>
+<p>If there is any problem with naming, scene hierarchy or positioning, you will get warning messages.</p>
+</li>
+<li>
+<p>You can see a sample message in Figure 3 when the naming convention is not correct.<img src="https://raw.githubusercontent.com/abh33/CoppeliaSim_MOOC_Assets/master/Module_1/LbD%201.2-Windmill/LbD_1.2_Figure_3.png" alt="" /></p>
+<p>​                                             <em>Figure 3: Naming Convention Warning Message.</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="LbD_1.1-Quiz.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="Lxt_1.1-Additional_Resources.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="LbD_1.1-Quiz.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="Lxt_1.1-Additional_Resources.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+                <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-145861739-2', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
