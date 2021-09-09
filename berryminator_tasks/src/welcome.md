@@ -16,8 +16,9 @@
 <!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
 
 <center>
-    <h1>Welcome to Nirikshak Bot (NB) Theme!</h1>
+    <h1>Welcome to Berryminator (BM) Theme!</h1>
 </center>
+
 
 
 

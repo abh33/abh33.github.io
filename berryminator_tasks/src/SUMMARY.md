@@ -1,6 +1,6 @@
 # Summary
 
-[Welcome to NB theme!](welcome.md)
+[Welcome to BM theme!](welcome.md)
 
 ---
 
