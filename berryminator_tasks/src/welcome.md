@@ -32,17 +32,25 @@
 
 </br>
 
-Rescue operations pose a grave danger to victim as well as to those  assigned the job of saving the lives of victims. Rescuing people in case of fire and explosion in any cityscape comprising numerous buildings  (these may be including residential, commercial, industrial,  petroleum/chemical distribution, maritime, construction, and  agricultural buildings etc) is a risky and crucial operation.
+Market size evaluation of Agriculture and allied industries was a whopping US$276.67 Billion dollars in fiscal year 2020 and guess what!? - these figures are only for the Indian context. We are encountering a new revolution in modern agriculture that is being driven by constant technological integrations and improvements. These range from drones to the implementation of smart sensors (IoT) and from research involving rural as well as urban farmers to using robots for weeding and seeding. 
 
-Robots can be used in such applications to save lives of people and also provide crucial information that can further be used by experts  for decision making. The purpose of Rapid Rescuer is to rescue victims  from dangerous or unpleasant situations to safer locations.
 
-Motivated by this idea, in the current edition of **e-Yantra Robotics Competition (eYRC 2020-21)** we have designed a theme, **“Nirikshak Bot”**.
 
-The arena for the theme is an abstraction of a city in the form of a maze. An image of a maze will be given to teams and using Image  Processing, teams have to find the shortest path from start node to  final node. This information will be communicated to the Bot. The goal  is to traverse the shortest path and evacuate people from different  locations to a safe place whilst avoiding unknown obstacles.
+The introduction of technology in agriculture can directly lead to more crop yield and using robots can achieve all this and more with high precision and accuracy. Their use significantly improves the speed of the entire process thereby increasing the profitability. Through **e-Yantra Robotics Competition (eYRC 2021-22)** we are trying to emulate the same by introducing the theme **Berryminator**.
 
-Challenges in this theme include Image Processing, Algorithm  building, Wireless Communication, Building a Bot, Embedded C  programming.
 
-The critical factor is time and the challenge is to complete the  given tasks in the shortest time possible whilst incurring the least penalties. The teams that perform the task best in accordance with the  rules will be declared the **WINNER** of the competition.
+
+The theme is set in an indoor environment where concepts of urban farming are being explored. The whole arena is abstracted as a simulation environment where berries are grown in vertically stacked trays within various rooms. The robot in the simulator navigates in the rooms and galleries of the complex in which the environment is controlled to provide optimal berries’ growth. The robot then identifies the berries and plucks them depending on various factors like size, ripeness and requirement.
+
+
+
+Challenges in this theme include **Robotic Simulation**, **Image Processing, 3D Designing, Algorithm Building, Robot Navigation and localization, Python programming and Lua programming**.
+
+
+
+The critical factor is time and the challenge is to complete the given tasks in the shortest possible time whilst incurring the least penalties. The teams that perform the task best in accordance with the rules will be declared the **WINNER** of the competition.
+
+
 
 All the best !!
 

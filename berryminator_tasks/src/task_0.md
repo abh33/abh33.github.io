@@ -26,7 +26,7 @@
 
 </br>
 
-Welcome to **Task 0** of **Nirikshak Bot**.
+Welcome to **Task 0** of **Berryminator** theme.
 
 The aim of this task is to get you started with installation of required software and learn the resources related to the software.
 
@@ -38,19 +38,19 @@ This task is divided into **four** parts:
   
   - **(a)** **[for Ubuntu OS](./software_installation_ubuntu.html)**
 
-  - **(b)** **[for Windows OS](./software_installation_windows.html)**
+  - **(b)** **[for Windows OS]()**
   
   Follow the instructions provided in these documents to install the software / libraries on the OS you have in your PC / laptop:
   
-  - Miniconda for Python 3.8
+  - Miniconda for Python 3.9
   - OpenCV
   - NumPy
   - Matplotlib
   - Jupyter Notebook, JupyterLab
-  - CoppeliaSim 4.0.0
+  - CoppeliaSim 4.2.0
   - Visual Studio Code
   
-- **(2)** **[Testing the Setup](./test_setup.html)** - This document contains instructions to test the installation of:
+- **(2)** **[Testing the Setup]()** - This document contains instructions to test the installation of:
 
   - Mincionda virtual Python environment
   - OpenCV, NumPy and other libraries
@@ -63,7 +63,7 @@ This task is divided into **four** parts:
   - Lua language
   - Basics of Linux and Ubuntu (**only** for teams using Ubuntu OS)
 
-- **(4)** **[Solving Assignment](./assignment.html)** - This document describes the assignment to be solved based on Python and Lua tutorials.
+- **(4)** **[Solving Assignment]()** - This document describes the assignment to be solved based on Python and Lua tutorials.
 
   - The assignment is a team-contest hosted on coding platform, CodeChef.
   - Each participant needs to create an account on CodeChef and create team after that to enter the contest.
