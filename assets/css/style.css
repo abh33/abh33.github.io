@@ -306,6 +306,163 @@ main {
   min-width: 259px;
 }
 
+.button-container {
+  text-align: left; /* Center the buttons */
+  
+}
+
+.button {
+  margin: 0px 0px; /* Add spacing between buttons */
+  /* background-color: #08080800; Default background color */
+  color: var(--light-gray-70);
+  border: none;
+  padding-left: 0px; /* Padding inside the buttons */
+  padding-right: 20px; /* Padding inside the buttons */
+  padding-bottom: 20px;
+  cursor: pointer; /* Change mouse cursor on hover */
+}
+
+/* Style for the active button */
+.button.active {
+  /* background-color: #c21414; Different background color for active button */
+  color: var(--orange-yellow-crayola);
+
+}
+
+.project00-buttons {
+  display: flex;
+  justify-content: space-around; /* This will space your items evenly */
+}
+
+.image-button {
+  background-size: cover;
+  background-position: center;
+  width: 240px; /* Adjust as needed */
+  height: 180px; /* Adjust as needed */
+  margin-left: 15px; /* Padding inside the buttons */
+  margin-right: 15px; /* Padding inside the buttons */
+  margin-bottom: 70px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding-top: 200px;
+  color: var(--white-2);
+}
+
+.image-button:hover {
+  transform: scale(1.1);
+}
+
+#project-101 {
+  background-image: url("../images/project-1.jpg");
+}
+
+#project-102 {
+  background-image: url("../images/project-2.png");
+}
+
+#project-103 {
+  background-image: url("../images/project-3.jpg");
+}
+
+#project-104 {
+  background-image: url("../images/project-4.png");
+}
+
+#project-301 {
+  background-image: url("../images/project-1.jpg");
+}
+
+#project-302 {
+  background-image: url("../images/project-2.png");
+}
+
+#project-303 {
+  background-image: url("../images/project-3.jpg");
+}
+
+#project-304 {
+  background-image: url("../images/project-4.png");
+}
+
+#project-305 {
+  background-image: url("../images/project-1.jpg");
+}
+
+#project-306 {
+  background-image: url("../images/project-2.png");
+}
+
+#project-307 {
+  background-image: url("../images/project-3.jpg");
+}
+
+#project-308 {
+  background-image: url("../images/project-4.png");
+}
+
+#project-401 {
+  background-image: url("../images/project-1.jpg");
+}
+
+#project-402 {
+  background-image: url("../images/project-2.png");
+}
+
+#project-403 {
+  background-image: url("../images/project-3.jpg");
+}
+
+#project-404 {
+  background-image: url("../images/project-4.png");
+}
+
+#project-405 {
+  background-image: url("../images/project-1.jpg");
+}
+
+#project-406 {
+  background-image: url("../images/project-2.png");
+}
+
+#project-407 {
+  background-image: url("../images/project-3.jpg");
+}
+
+#project-408 {
+  background-image: url("../images/project-4.png");
+}
+
+#project-409 {
+  background-image: url("../images/project-1.jpg");
+}
+
+#project-4010 {
+  background-image: url("../images/project-2.png");
+}
+
+#project-501 {
+  background-image: url("../images/project-1.jpg");
+}
+
+#project-502 {
+  background-image: url("../images/project-2.png");
+}
+
+#project-601 {
+  background-image: url("../images/project-1.jpg");
+}
+
+#project-602 {
+  background-image: url("../images/project-2.png");
+}
+
+#project-603 {
+  background-image: url("../images/project-3.jpg");
+}
+
+
 
 
 
